@@ -1,5 +1,4 @@
 %define major 0
-%define api 3.0
 %define libname %mklibname %{name}
 %define devname %mklibname %{name} -d
 %global _disable_rebuild_configure 1
@@ -32,7 +31,7 @@ This package contains the library needed to run programs dynamically
 linked with %{name}.
 
 %files -n %{libname}
-#{_libdir}/lib%{name}-%{api}.so.%{major}*
+%{_libdir}/libSDL3_ttf.so.%{major}*
 
 #----------------------------------------------------------------------------
 
@@ -48,10 +47,13 @@ applications which will use %{name}.
 
 %files -n %{devname}
 #doc README.txt CHANGES.txt
-#{_includedir}/SDL2/*
-#{_libdir}/lib%{name}.so
-#{_libdir}/pkgconfig/%{name}.pc
-#{_libdir}/cmake/SDL2_ttf
+%license %{_datadir}/licenses/SDL3_ttf/LICENSE.txt
+%{_includedir}/SDL3_ttf/
+%{_libdir}/libSDL3_ttf.so
+%{_libdir}/pkgconfig/sdl3-ttf.pc
+%{_libdir}/cmake/SDL3_ttf/
+%{_mandir}/man3/SDL_*
+%{_mandir}/man3/TTF*
 
 #----------------------------------------------------------------------------
 
@@ -66,8 +68,8 @@ applications which will use %{name}.
             -DSDLTTF_INSTALL_MAN:BOOL=ON \
             -DSDLTTF_PLUTOSVG:BOOL=OFF \
             -DSDLTTF_RELOCATABLE:BOOL=OFF \
-            -DSDLTTF_SAMPLES:BOOL=ON \
-            -DSDLTTF_SAMPLES_INSTALL:BOOL=ON \
+            -DSDLTTF_SAMPLES:BOOL=OFF \
+            -DSDLTTF_SAMPLES_INSTALL:BOOL=OFF \
             -DSDLTTF_STRICT:BOOL=ON \
             -DSDLTTF_VENDORED:BOOL=OFF \
             -DSDLTTF_WERROR:BOOL=OFF
