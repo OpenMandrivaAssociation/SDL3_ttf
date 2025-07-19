@@ -64,7 +64,7 @@ applications which will use %{name}.
             -DSDLTTF_INSTALL:BOOL=ON \
             -DSDLTTF_INSTALL_CPACK:BOOL=ON \
             -DSDLTTF_INSTALL_MAN:BOOL=ON \
-            -DSDLTTF_PLUTOSVG:BOOL=ON \
+            -DSDLTTF_PLUTOSVG:BOOL=OFF \
             -DSDLTTF_RELOCATABLE:BOOL=OFF \
             -DSDLTTF_SAMPLES:BOOL=ON \
             -DSDLTTF_SAMPLES_INSTALL:BOOL=ON \
