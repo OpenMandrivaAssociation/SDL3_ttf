@@ -48,10 +48,10 @@ applications which will use %{name}.
 
 %files -n %{devname}
 %doc README.txt CHANGES.txt
-%{_includedir}/SDL2/*
-%{_libdir}/lib%{name}.so
-%{_libdir}/pkgconfig/%{name}.pc
-%{_libdir}/cmake/SDL2_ttf
+#{_includedir}/SDL2/*
+#{_libdir}/lib%{name}.so
+#{_libdir}/pkgconfig/%{name}.pc
+#{_libdir}/cmake/SDL2_ttf
 
 #----------------------------------------------------------------------------
 
