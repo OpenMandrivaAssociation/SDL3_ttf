@@ -32,7 +32,7 @@ This package contains the library needed to run programs dynamically
 linked with %{name}.
 
 %files -n %{libname}
-%{_libdir}/lib%{name}-%{api}.so.%{major}*
+#{_libdir}/lib%{name}-%{api}.so.%{major}*
 
 #----------------------------------------------------------------------------
 
